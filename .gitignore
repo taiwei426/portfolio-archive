@@ -1,5 +1,8 @@
-images/3d
-images/animation
+3d/
+animation/
+mobile/
+traditional/
+web/
 
 # Global OSX ignore below this line
 .DS_Store
