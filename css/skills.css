@@ -1,0 +1,145 @@
+#skillsBackground{
+	background-image: url("sepia.jpg");
+	width: 1000px;
+	height: 1000px;
+}
+#skillsContainer{
+	top: 50%;
+	width: 100%;
+	height: 100%;
+	background-color: blue;
+}
+#circleCSS{
+	top: 125px;
+	width: 150px;
+	height: 150px;
+	left: 150px;
+	-webkit-animation-delay: .2s;
+}
+#circleHTML{
+	top: 100px;
+	width: 200px;
+	height: 200px;
+	left: 350px;
+	-webkit-animation-delay: .3s;
+}
+#circlejQuery{
+	top: 150px;
+	width: 100px;
+	height: 100px;
+	left: 600px;
+	-webkit-animation-delay: .4s;
+}
+.skillsCircle{
+	border-style: solid;
+	border-width: 1px;
+	border-color: white;
+	border-radius: 50%;
+	position: absolute;
+	opacity: 0;
+	-webkit-animation-name: skillsCircles;
+	-webkit-animation-duration: 2.5s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-timing-function: linear;
+}
+@-webkit-keyframes skillsCircles{
+	0%{
+		opacity: 0;
+		-webkit-transform: scale(0.5, 0.5);
+	}
+	12%{
+		opacity: 1;
+		-webkit-transform: scale(1.8, 1.8);
+	}
+	23%{
+		-webkit-transform: scale(1.3, 1.3);
+	}
+	37%{
+		-webkit-transform: scale(1.8, 1.8);
+	}
+	50%{
+		-webkit-transform: scale(1.6, 1.6);
+	}
+	65%{
+		-webkit-transform: scale(1.8, 1.8);
+	}
+	100%{
+		opacity: 1;
+		-webkit-transform: scale(1.8, 1.8);
+	}
+}
+
+
+#textCSS{
+	top: 100px;
+	left: 210px;
+	position: absolute;
+	-webkit-animation-delay: .2s;
+}
+#textHTML{
+	top: 100px;
+	left: 430px;
+	position: absolute;
+	-webkit-animation-delay: .4s;
+}
+#textJQ{
+	top: 100px;
+	left: 630px;
+	position: absolute;
+	-webkit-animation-delay: .3s;
+}
+.skillsText{
+	font-family: sans-serif;
+	position: absolute;
+	color: white;
+	opacity: 0;
+	z-index: 10;
+	-webkit-animation-name: skillsTextAnimation;
+	-webkit-animation-duration: 2.5s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-timing-function: linear;
+}
+@-webkit-keyframes skillsTextAnimation{
+	0%{
+		top:0;
+	}
+	15%{
+		top:200px;
+		opacity: 1;
+	}
+	23%{
+		top: 180px;
+	}
+	37%{
+		top: 200px;
+	}
+	50%{
+		top: 190px;
+	}
+	65%{
+		top: 200px;
+	}
+	100%{
+		top:200px;
+		opacity: 1;		
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

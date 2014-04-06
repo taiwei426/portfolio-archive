@@ -1,0 +1,327 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.5;
+	color: #666;
+	font-size: 14px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+html { 
+	overflow-y: scroll; /* always force a scrollbar in non-IE */
+	}
+body {
+	background: url(../images/trial/halfmoon2.jpg) no-repeat fixed;
+	background-repeat: repeat;
+}
+h1 {
+	color: #9C3;
+}
+a, a:link,
+a:active,
+a:visited {
+	-webkit-transition: color 0.25s ease-out;
+	-moz-transition: color 0.25s ease-out;
+	-o-transition: color 0.25s ease-out;
+	transition: color 0.25s ease-out;
+	color:#FFF;
+	outline: none;
+	text-decoration:none;
+	}
+a:hover {
+	color:#9C3;
+	}
+img { 
+	display:block;
+	}
+
+
+/*text format
+**************************************************/
+.tiny{
+	color: #ffffff;
+	font-size: 10px;
+}
+.title{
+	color: #333333;
+	font: 15px "Lucida Grande", Tahoma;
+	text-transform: uppercase;
+	font-weight: lighter;
+	letter-spacing: 0.1em;
+}
+.text{
+	color: #333333;
+	font-size: 11px;
+}
+.menuText{
+	color: #ffffff;
+	font-size: 18px;
+	font-variant: small-caps;
+}
+
+/*page structure
+**************************************************/
+
+#wrapper{
+	width:100%;
+}
+#logo{
+	z-index: 10;  
+	width: 220px;
+	height: 100px;
+	position: fixed;
+	background-color: #666666;
+}
+#logoInner{
+	position: relative;
+	margin:auto;
+	width: 100px;
+}
+
+#logo:hover  {
+    opacity: .7; 
+    
+    -moz-transition: all 0.1s ease-out;  /* FF4+ */
+    -o-transition: all 0.1s ease-out;  /* Opera 10.5+ */
+    -webkit-transition: all 0.1s ease-out;  /* Saf3.2+, Chrome */
+    -ms-transition: all 0.1s ease-out;  /* IE10? */
+    transition: all 0.1s ease-out;  
+	}
+
+/****************** loader **********************/
+
+.modal {
+    display:    block;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     50%;
+    width:      50%;
+}
+/****************** main menu **********************/
+
+#menuwrapper{
+	position: fixed;
+	width: 220px;
+	background-color: rgba(255, 255, 255, 0.3);
+	height: 100%;
+	float:left;
+}
+
+#menu{
+	height: 100%;
+	width: 100%;
+	padding-top: 100px;
+	overflow: auto;
+	position: relative;
+}
+.icon{
+	opacity: .2;
+}
+.icon:hover{
+	opacity: 1;
+}
+
+/******************sub menu **********************/
+
+.menuSub1, 
+.menuSub2, 
+.menuSub3 {
+	color: #ffffff;
+	font-size: 12px;
+}
+
+/*content div not responsive enough*/
+#content{
+	width:100%;
+	min-width:300px;
+	max-width: 1100px;
+	float:left;
+	padding-left: 220px;
+}
+#workContainer{
+	width: 100%;	
+}
+.section_1, 
+.section_2, 
+.section_3{
+	width: 100%;	
+}
+
+
+/*works containers*******************************/
+.artwork {
+	display: block;
+}
+
+
+/*loader*******************************/
+#loader{
+	margin: auto;
+	border: 1px solid #ccc;
+	width: 500px;
+	height: 500px;
+	overflow: hidden;
+}
+#loader.loading{
+	background: #fff url(images/loader.gif) no-repeat center center;
+		}
+/*right nav*******************************/
+.description {
+    z-index: 10;
+    border: 1px solid white;
+    opacity: 1;  
+	width: 40px;
+	height: 40px;
+	position: fixed;
+	float: right;
+	left:100%;
+	top:40px;
+	margin-left: -61px;
+}
+.description2 {
+    z-index: 10;
+	width: 40px;
+	height: 40px;
+	position: fixed;
+	float: right;
+	left:100%;
+	top:40px;
+	margin-left: -61px;
+}
+.arrow_up {
+    z-index: 10;
+    border: 1px solid white;
+    opacity: .9;  
+	width: 40px;
+	height: 40px;
+	position: fixed;
+	float: right;
+	left:100%;
+	top:100px;
+	margin-left: -61px;
+}
+.arrow_down {
+    z-index: 10;
+    border: 1px solid white;
+    opacity: .9;  
+	width: 40px;
+	height: 40px;
+	position: fixed;
+	float: right;
+	left:100%;
+	top:160px;
+	margin-left: -61px;
+}
+.arrow_top {
+    z-index: 10;
+    border: 1px solid white;
+    opacity: .9;  
+	width: 40px;
+	height: 40px;
+	position: fixed;
+	float: right;
+	left:100%;
+	top:93%;
+	margin-left: -61px;
+}
+
+.arrow_up:hover, 
+.arrow_down:hover,
+.arrow_top:hover, 
+.description:hover  {
+    opacity: 1; 
+    background-color: rgba(255, 255, 255, 0.3);
+    -moz-transition: all 0.1s ease-out;  /* FF4+ */
+    -o-transition: all 0.1s ease-out;  /* Opera 10.5+ */
+    -webkit-transition: all 0.1s ease-out;  /* Saf3.2+, Chrome */
+    -ms-transition: all 0.1s ease-out;  /* IE10? */
+    transition: all 0.1s ease-out;  
+	}
+
+
+/*descriptions of artworks in right nav*******************************/
+.detailsInfo{
+	}
+#details {
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.5);
+    opacity: .8;  
+	width: 200px;
+	height: 250px;
+	left:100%;
+	top:40px;
+	margin-left: -280px;
+	position: fixed;
+	float: right;
+	display: none;
+	overflow: hidden;
+
+}
+#detailsContainer{
+	position: absolute;
+	top:30px;
+	left: 30px;
+	width:150px;
+	height: 100%;
+}
+#details0,
+#details1, 
+#details2, 
+#details3, 
+#details4, 
+#details5, 
+#details6, 
+#details7, 
+#details8, 
+#details9, 
+#details10, 
+#details11, 
+#details12{
+	overflow: hidden;
+	position: absolute;
+	display: none;
+}
+
+
+
+
+

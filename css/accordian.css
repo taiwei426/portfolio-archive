@@ -1,0 +1,36 @@
+#accordion .item {
+    width: 100%;
+    height: 30px; /* height = total height of A child element */
+    overflow: hidden;
+    transition: height ease-in-out 500ms; /* css3 transition */
+    -o-transition: height ease-in-out 500ms;
+    -moz-transition: height ease-in-out 500ms;
+    -webkit-transition: height ease-in-out 500ms;
+    
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    margin-bottom: 2px;
+    text-align: center;
+}
+#accordion h1 {
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    padding: 5px;
+    color: #ffffff;
+    font-size: 18px;
+    font-variant: small-caps;;
+}
+#accordion p {
+    height: 130px;
+    padding: 5px;
+    color: #9c3;
+    font-size: 12px;
+}
+#accordion div:hover {
+    height: 130px; /* height = total height of A and P child elements */
+}
+#accordion div:hover a {
+    font-weight: bold;
+}

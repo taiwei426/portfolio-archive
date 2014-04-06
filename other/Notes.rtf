@@ -1,0 +1,488 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf340
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red11\green102\blue255;\red0\green0\blue0;\red11\green102\blue255;
+\red255\green255\blue255;\red10\green103\blue255;}
+\margl1440\margr1440\vieww16600\viewh19520\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 	<script type="text/javascript">\
+		$(function()\{\
+			$('a#detailsDescription').click(function()\{\
+				$('#details').toggle(200);\
+			\});\
+		\});\
+	</script>\
+\
+_____________\
+\
+Basic idea for the scrolling:\
+\
+// Variable to keep track of the "current" image that the user is looking at\
+var nextImage = 1;\
+\
+// Array containing all the top values \
+var imageTopLocations = [$(".vase").offset().top, 100, 500, 800];\
+\
+// Move the screen to the top of the first image\
+$('html, body').animate( \{ scrollTop: imageTopLocations[ nextImage ] \}, 2000);\
+\
+// Set the next image\
+nextImage++;\
+\
+// Should put this all in a function that the button calls. Also somehow disable the right buttons when you've reached the last image.\
+\
+\
+__________________\
+\
+\
+	<script type="text/javascript">\
+		$(function()\{\
+			var nextImage = 1;\
+			var imageTopLocations = [$(".vase").offset().top, 100, 500, 800];\
+			$('#workContainer').animate( \{ scrollTop: imageTopLocations[ nextImage ] \}, 2000);\
+			nextImage++;\
+			\});\
+		\});\
+	</script>\
+\
+________________________\
+\
+	<script type="text/javascript">\
+		$(function()\{\
+			var nextImage = 0;\
+			var imageLocations = [$('#pic01').offset().top, \
+							$('#pic02').offset().top,\
+							$('#pic03').offset().top, \
+							$('#pic04').offset().top,\
+							$('#pic05').offset().top,];\
+		$('.arrow_down').click(function()\{			\
+			$('html, body').animate( \{ \
+				scrollTop: imageLocations[ nextImage ] \
+				\}, 1000);\
+					nextImage++;\
+			\});\
+		$('.arrow_up').click(function()\{			\
+			$('html, body').animate( \{ \
+				scrollTop: imageLocations[ nextImage ] \
+				\}, 1000);\
+					nextImage--;\
+			\});\
+		\});\
+	</script>\
+\
+___________________\
+\
+doesn't work\
+\
+$(function() \{\
+\
+    function scroll(direction) \{\
+\
+        var scroll, i,\
+                positions = [],\
+                here = $(window).scrollTop(),\
+                collection = $('.box');\
+	collection.each (function() \{\
+		positions.push(parseInt($(this).offset()['top'],10));\
+\});\
+for (i=0; i<positions.length; i++)\{\
+if (direction == 'next' && positions [i] > here) \{scroll = collection.get(i); break;\}\
+if (direction == 'prev' && i > 0 && positions[i] >= here) \{ scroll = collection.get(i--); break; \}\
+        if (scroll) \{\
+            $.scrollTo(scroll, \{\
+                duration: 750       \
+            \});\
+        \}\
+\
+        return false;\
+    \}\
+\
+    $("#next,#prev").click(function() \{        \
+        return scroll($(this).attr('id'));        \
+    \});\
+    \});\
+\
+___________________________________________\
+\
+didn't finish\
+	<script type="text/javascript">\
+		$(function()\{\
+			$(function scroll(direction)\{\
+				scroll = []\
+				var nextImage = 0;\
+				var currentLocation = $(window).scrollTop();\
+				var imageLocations = [$('#pic01').offset().top, \
+							$('#pic02').offset().top,\
+							$('#pic03').offset().top, \
+							$('#pic04').offset().top,\
+							$('#pic05').offset().top,];\
+\
+		for (var i = 0; i < imageLocations.length; i++) \{ \
+			if (direction == 'next' && imageLocations[i] > currentLocation)\{\
+				scroll = \
+			if (direction == 'pref' && i > 0 && imageLocations[i] >= currentLocation) \{\'85.\
+\
+\
+		$('.arrow_down').click(function()\{			\
+			$('html, body').animate( \{ \
+				scrollTop: imageLocations[ nextImage ] \
+				\}, 1000);\
+			nextImage++;\
+			\});\
+		$('.arrow_up').click(function()\{			\
+			$('html, body').animate( \{ \
+				scrollTop: imageLocations[ nextImage ] \
+				\}, 1000);\
+			nextImage--;\
+			\});\
+		\});\
+	</script>\
+\
+\
+\
+______________\
+nextImage = 0;\
+var imageLocations = [$('#pic01').offset().top, \
+			$('#pic02').offset().top,\
+			$('#pic03').offset().top, \
+			$('#pic04').offset().top,\
+			$('#pic05').offset().top,];\
+\
+	var image1 = 0;\
+	var image2 = $('#pic02').offset().top;\
+	var image3 = $('#pic03').offset().top;\
+	var image4 = $('#pic04').offset().top;\
+	var image5 = $('#pic05').offset().top;\
+\
+if($(document).scrollTop() >= image1 && $(document).scrollTop() < image2)\{\
+		console.log();\
+	\} else if ($(document).scrollTop() >= image2 && $(document).scrollTop() < image3)\{\
+		$(\'85do something\'85);\
+	\} else if ($(document).scrollTop() >= image3 && $(document).scrollTop() < image4)\{\
+		$(\'85do something\'85);\
+	\} else if ($(document).scrollTop() >= image4 && $(document).scrollTop() < image5)\{\
+		$(\'85do something\'85);\
+	\} else if ($(document).scrollTop() >= image5)\{\
+		$(\'85do something\'85);\
+	\}\
+\}\
+\
+$('nav#primaryLeft a.about').addClass('active');             <------------- can probably use this to get element for the detail description\
+\
+\
+	<script type="text/javascript">\
+		$(function ()\{\
+			$('.arrow_down').click(function()\{			\
+				$('html, body').animate( \{ \
+					scrollTop: imageLocations[ nextImage ] \
+					\}, 1000);\
+					nextImage++;\
+	\
+		\});\
+\
+\
+\
+\
+		$('#down').click(function()\{			\
+			$('html, body').animate(\{\
+				scrollTop: $("#pic04").offset().top\
+				\}, 1000);\
+			\});\
+\
+\
+\
+if($(document).scrollTop()\
+\
+function getCurrentImage()\{\
+	
+\f1\fs22 \cf2 for(var i=0; i<arrayOfPaintings.length; i++)\{\
+\pard\pardeftab720
+\cf2 		if($(document).scrollTop()>=$(arrayOfPaintings[i]).offset().top && $(document).scrollTop()< $(arrayOfPaintings[i+1]).offset().top)\{\
+		console.log("i'm looking at the " + i + " painting!")\};\
+\};\};
+\f0\fs24 \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \
+\
+\
+		function()\{			\
+			$('html, body').animate( \{ \
+				scrollTop: $(getCurrentImage()+1).offset().top \
+				\}, 1000);\
+			\});\
+\
+///////////////////////////////////////////\
+\pard\pardeftab720
+
+\f1\fs22 \cf2 if($(document).scrollTop() >= $(arrayOfPaintings[0]).offset().top && $(document).scrollTop() < $(arrayOfPaintings[1]).offset().top)\{\
+		console.log("I'm looking at the first image!");\
+\} \
+\
+\
+\
+\
+\
+if($(document).scrollTop() >= $(arrayOfDrawingss[0]).offset().top && $(document).scrollTop() < $(arrayOfDrawings[1]).offset().top)\{\
+		console.log("I'm looking at the first drawing!");\
+\}\
+\
+\
+\
+\
+\
+\
+if($(document).scrollTop() >= $(arrayOfPaintings[1]).offset().top && $(document).scrollTop() < $(arrayOfPaintings[2]).offset().top)\{\
+		console.log("I'm looking at the second image!");\
+\}\
+if($(document).scrollTop() >= $(arrayOfPaintings[2]).offset().top && $(document).scrollTop() < $(arrayOfPaintings[3]).offset().top)\{\
+		console.log("I'm looking at the third image!");\
+\}\
+if($(document).scrollTop() >= $(arrayOfPaintings[3]).offset().top && $(document).scrollTop() < $(arrayOfPaintings[4]).offset().top)\{\
+		console.log("I'm looking at the 4th image!");\
+\}\
+if($(document).scrollTop() >= $(arrayOfPaintings[4]).offset().top && $(document).scrollTop() < $(arrayOfPaintings[5]).offset().top)\{\
+		console.log("I'm looking at the 5th image!");\
+\}
+\f0\fs24 \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 ////////////////////////////ALMOST THERE//////////////////////////// (SCROLLING WORKS!!!!!)\
+\pard\pardeftab720
+
+\f1\fs22 \cf2 \
+$("#painting").children()\
+\
+var arrayOfPaintings = $("#painting").children()\
+	\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 // get the current image by looking at what's before and after the image. 
+\f1\fs22 \cf2 \
+\pard\pardeftab720
+\cf2 function getCurrentImage()\{\
+	for(var i=0; i<arrayOfPaintings.length; i++)\{\
+		if($(document).scrollTop()>=$(arrayOfPaintings[i]).offset().top && $(document).scrollTop()< $(arrayOfPaintings[i+1]).offset().top)\{\
+		return i\};\
+\}\}\
+\pard\pardeftab720
+
+\f0\fs24 \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \
+\pard\pardeftab720
+
+\f1\fs22 \cf2 function scrolldown()\{\
+			$('html, body').animate( \{ \
+				scrollTop: $(arrayOfPaintings[getCurrentImage()+1]).offset().top \
+				\}, 1000);\
+			\}\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 \
+\pard\pardeftab720
+
+\f1\fs22 \cf2 	function scrollup()\{\
+            \
+			$('html, body').animate( \{ \
+				scrollTop: $(arrayOfPaintings[getCurrentImage()-1]).offset().top \
+				\}, 1000);\
+			\}
+\f0\fs24 \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \
+\
+//////////////////actual code//////////////////////////////\
+\
+\pard\pardeftab720
+
+\f1\fs22 \cf2 var arrayOfArtworks = $(".artwork").children()\
+\
+function getCurrentImage()\{\
+	for(var i=0; i<arrayOfArtworks.length; i++)\{\
+		if($(document).scrollTop()>=$(arrayOfArtworks[i]).offset().top && $(document).scrollTop()< $(arrayOfArtworks[i+1]).offset().top)\{\
+		return i\};\
+\}\}
+\f0\fs24 \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f1\fs22 \cf2 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 $('.arrow_up').click(function 
+\f1\fs22 \cf2 scrollup()\{\
+\pard\pardeftab720
+\cf2 			$('html, body').animate( \{ \
+				scrollTop: $(arrayOfArtworks[getCurrentImage()-1]).offset().top \
+				\}, 1000);\
+			\}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 $('.arrow_down').click(
+\f1\fs22 \cf2 function scrolldown()\{\
+\pard\pardeftab720
+\cf2 			$('html, body').animate( \{ \
+				scrollTop: $(arrayOfArtworks[getCurrentImage()+1]).offset().top \
+				\}, 1000);\
+			\}
+\f0\fs24 \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \
+\
+\
+\
+\pard\pardeftab720\sl260
+
+\f1\fs22 \cf0 \
+\
+\
+///////////////// TO GET THE DESCRIPTION WORKING///////////////////\
+// Need a function that will hide all the detailInfos, and then only show the\
+// one that we want each time. \
+\
+// Code to hide all \
+\pard\pardeftab720
+\cf2 $(".detailsInfo").css("display","none")\
+\
+\cf3 // Code to show just one\cf2 \
+$("#details"+getCurrentImage()).css("display","block")\
+\
+\cf3 // Now just need to wrap these in a function \cf2 \
+\pard\pardeftab720
+\cf4 \cb5 function showDescription()\{$("#details"+getCurrentImage()).css("display","block")\}\
+function hideAllDescriptions()\{$(".detailsInfo").css("display","none")\}
+\f0\fs24 \cf0 \cb1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \
+\pard\pardeftab720
+
+\f1\fs22 \cf0 // function that shows the descriptions when the toggle button is clicked on 
+\f0\fs24 \
+\pard\pardeftab720
+
+\f1\fs22 \cf4 \cb5 function detailToggle() \{\
+	$('a#detailsDescription').click(function()\{\
+		hideAllDescriptions();\
+		showDescription();\
+		$('#details').toggle(200);\
+	\});\
+\}
+\f0\fs24 \cf0 \cb1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \
+\pard\pardeftab720
+
+\f1\fs22 \cf0 // code to show descriptions while scrolling\
+\pard\pardeftab720\sl260
+\cf6 function scrollingDescription()\{\
+	hideAllDescriptions();\
+	showDescription();\
+\}\
+\cf0 \
+\pard\pardeftab720
+\cf0 // code that actually calls the showing description function while scrolling\
+\pard\pardeftab720\sl260
+\cf6 $(window).scroll(scrollingDescription);\cf0 \
+
+\f0\fs24 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \
+\pard\pardeftab720\sl260
+
+\f1\fs22 \cf0 /////////////////code that works//////////////////////////////////\
+var arrayOfDetails = $('.detailsInfo').children()\
+arrayOfDetails[getCurrentImage()]
+\f0\fs24 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \
+/////////////////////////////////////////////////////////////\
+\pard\pardeftab720
+
+\f1\fs22 \cf2 var arrayOfArtworks = $('.artwork').children();\
+\pard\pardeftab720
+
+\f0\fs24 \cf0 \
+\pard\pardeftab720
+
+\f1\fs22 \cf4 \cb5 		var getCurrentImage = function()\{\
+			for(var i=0; i<arrayOfArtworks.length; i++)\{\
+				if($(document).scrollTop()>=$(arrayOfArtworks[i]).offset().top && $(document).scrollTop()< $(arrayOfArtworks[i+1]).offset().top)\{\
+					return i;\
+				\}\
+			\}\
+		\}\
+\
+
+\f0\fs24 \cf0 \cb1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+/////////////////showing details working code/////////////////////////////\
+\pard\pardeftab720
+
+\f1\fs22 \cf2 \
+var arrayOfDetails = $('.detailsInfo').children()
+\f0\fs24 \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \
+var getCurrentDetail = function()\{\
+	for (var e=0; e<
+\f1\fs22 \cf2 arrayOfDetails.length; e++)\{\
+		if($('#detailsContainer').scrollTop() >= $(arrayOfDetails[e]).offset().top && $('#detailsContainer').scrollTop()< $(arrayOfDetails[e+1]).offset().top)\{\
+\pard\pardeftab720
+\cf2 		return e\};\
+\}\}
+\f0\fs24 \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \
+\
+\
+\
+\
+\
+$('.arrow_up').click(function 
+\f1\fs22 \cf2 scrollup()\{\
+\pard\pardeftab720
+\cf2 			$('html, body').animate( \{ \
+				scrollTop: $(arrayOfArtworks[getCurrentImage()-1]).offset().top \
+				\}, 1000);\
+			$('#detailsContainer').animate(\{\
+				scrollTop: $(arrayOfDetails[getCurrentDetail()-1]).offset().top\
+				\}); \
+			\}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 $('.arrow_down').click(
+\f1\fs22 \cf2 function scrolldown()\{\
+\pard\pardeftab720
+\cf2 			$('html, body').animate( \{ \
+				scrollTop: $(arrayOfArtworks[getCurrentImage()+1]).offset().top \
+				\}, 1000);\
+			$('#detailsContainer').animate(\{\
+				scrollTop: $(arrayOfDetails[getCurrentDetail()+1]).offset().top\
+				\}); \
+\
+			\}
+\f0\fs24 \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \
+\
+\
+\
+\
+\
+\
+\
+\
+\
+}

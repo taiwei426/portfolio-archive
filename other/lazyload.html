@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<!-- this did work...but then i moved the folder and i haven't fixed the links or something but it's not working anymore -->
+
+<html>
+<head>
+	<title>Heartcode CanvasLoader example</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="language" content="en" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	
+	<!-- Include the heartcode canvasloader js file -->
+
+	
+	
+	<style type="text/css">
+		body, html {
+			margin: 10px;
+			background: #ddd;
+		}
+		#loader{
+			margin: auto;
+			border: 1px solid #ccc;
+			width: 500px;
+			height: 500px;
+			overflow: hidden;
+		}
+		.loading{
+			background: #fff url(../images/loader.gif) no-repeat center center;
+		}
+	</style>
+</head>
+<body>
+	<!-- Create a div which will be the canvasloader wrapper -->	
+	<div id="loader" class="loading"></div>
+		
+	<!-- This script creates a new CanvasLoader instance and places it in the wrapper div -->
+	<script src="../js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+  	<script type="text/javascript" charset="utf-8">
+  		$(function(){
+  			var img = new Image();
+  			$(img).load(function(){
+  				$(img).hide();
+  				$('#loader').removeClass('loading').append(img);
+  				$(img).fadeIn('slow');
+  				console.log("the image has been loaded!");
+  			}). attr('src', '../images/traditional/drawing/bottles.png');
+  		});
+  	</script>
+</body>
+</html>

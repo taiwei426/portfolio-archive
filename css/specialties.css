@@ -1,0 +1,223 @@
+#container{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background-image: url("sepia.jpg");
+}
+#specialtiesContainer{
+	float: left;
+	position: fixed;
+	top: 20%;
+	left: 10%;
+	height: 100%;
+	background-color: green;
+}
+#barsContainer{
+	width: 80%;
+	height: 100%;
+	float: left;
+	position: fixed;	
+}
+#bar1{
+	-webkit-animation-delay: .4s;
+}
+#bar2{
+	-webkit-animation-delay: .2s;
+}
+#bar3{
+	-webkit-animation-delay: .1s;
+}
+#bar4{
+	-webkit-animation-delay: .3s;
+}
+#bar5{
+	-webkit-animation-delay: .4s;
+}
+#bar6{
+	-webkit-animation-delay: .2s;
+}
+#bar7{
+	-webkit-animation-delay: .1s;
+}
+#bar8{
+	-webkit-animation-delay: .3s;
+}
+.bars{
+	opacity:0;
+}
+.barsAnimation{
+	height: 30px;
+	background-color: white;
+	margin-bottom: 10px;
+	-webkit-animation-name: barsAnimation;
+	-webkit-animation-duration: 2.5s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-timing-function: linear;
+}
+@-webkit-keyframes barsAnimation{
+	0%{
+		opacity: 0;
+		width: 0%;
+	}
+	12%{
+		opacity: 0.2;
+		width: 100%;
+	}
+	23%{
+		width: 90%;
+	}
+	37%{
+		width: 100%;
+	}
+	50%{
+		width: 95%;
+	}
+	65%{
+		width: 100%;
+	}
+	100%{
+		opacity: .2;
+		width: 100%;
+	}
+}
+
+
+
+
+#graphContainer{
+	width: 80%;
+	height: 100%;
+	position: fixed;
+	float: left;
+}
+#graph1Container{
+	width: 75%;
+	margin-bottom: 10px;
+}
+#graph1{
+	-webkit-animation-delay: .5s;	
+}
+#graph2Container{
+	width: 85%;
+	margin-bottom: 10px;
+}
+#graph2{
+	-webkit-animation-delay: .3s;	
+}
+#graph3Container{
+	width: 85%;
+	margin-bottom: 10px;
+}
+#graph3{
+	-webkit-animation-delay: .2s;	
+}
+#graph4Container{
+	width: 65%;
+	margin-bottom: 10px;
+}
+#graph4{
+	-webkit-animation-delay: .4s;	
+}
+#graph5Container{
+	width: 68%;
+	margin-bottom: 10px;
+}
+#graph5{
+	-webkit-animation-delay: .5s;	
+}
+#graph6Container{
+	width: 60%;
+	margin-bottom: 10px;
+}
+#graph6{
+	-webkit-animation-delay: .3s;	
+}
+#graph7Container{
+	width: 85%;
+	margin-bottom: 10px;
+}
+#graph7{
+	-webkit-animation-delay: .2s;	
+}
+#graph8Container{
+	width: 90%;
+	margin-bottom: 10px;
+}
+#graph8{
+	-webkit-animation-delay: .4s;	
+}
+
+
+
+
+
+
+#textBox{
+	color: white;
+	float: left;
+	margin-left: 30%;
+	margin-right: 2%;
+	width: 100%;
+}
+
+.specialtiesText{
+	height: 30px;
+	margin-top: 10px;
+	margin-bottom: 8px;
+	
+
+	opacity: 0;
+	z-index: 10;
+	
+	text-align: right;
+	font-family: Sans-serif;
+	font-size: 12px;
+	-webkit-animation-name: specialtiesTextAnimation;
+	-webkit-animation-duration: 2.5s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-timing-function: linear;
+}
+@-webkit-keyframes specialtiesTextAnimation{
+	0%{
+		top:0;
+	}
+	60%{
+		
+		opacity: 1;
+	}
+
+	100%{
+		
+		opacity: 1;		
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
