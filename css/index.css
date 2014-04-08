@@ -145,7 +145,11 @@ ul.img-list li:hover span.text-content {
 	}
 }
 
-
+.footer{
+	margin: 50px auto 100px auto;
+	height: 40px;
+	width: 250px;
+}
 
 
 
