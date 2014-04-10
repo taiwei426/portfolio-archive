@@ -23,7 +23,18 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-
+a, a:link,
+a:hover,
+a:active,
+a:visited {
+	-webkit-transition: color 0.25s ease-out;
+	-moz-transition: color 0.25s ease-out;
+	-o-transition: color 0.25s ease-out;
+	transition: color 0.25s ease-out;
+	color:#333333;
+	outline: none;
+	text-decoration:none;
+}
 
 .logo{
 	font: 200px 'Italianno', Helvetica, Sans-serif;
@@ -43,7 +54,7 @@ footer, header, hgroup, menu, nav, section {
 }
 
 .navContainer{
-	border-bottom: 1px solid white; /**need to change this border**/
+	overflow: auto;
 }
 
 
@@ -59,7 +70,6 @@ footer, header, hgroup, menu, nav, section {
 	font-weight: lighter;
 	letter-spacing: 0.3em;
 	border-width: 1px white;
-	
 	border-bottom: solid #000000 1px; 
 }
 
@@ -102,11 +112,6 @@ ul.img-list a{
 	display:block;
 }
 
-.rando{
-	background-color:blue;
-	height: 100%;
-}
-
 .text-content {
 	background: rgba(0,0,0,0.6);
 	color: white;
@@ -146,9 +151,25 @@ ul.img-list li:hover span.text-content {
 }
 
 .footer{
-	margin: 50px auto 100px auto;
-	height: 40px;
-	width: 250px;
+	margin: 80px auto 30px auto;
+	padding-top: 30px;
+}
+ul.footer{
+	border-width: 1px white;
+	border-top: solid #000000 1px; 
+	margin: 0 auto 0 auto;
+	text-align: center;
+}
+ul.footer li{
+	display: inline;
+	padding: 0 20px 0 20px;
+	font: 12px "Lucida Grande", Tahoma;
+	text-align: center;
+	text-transform: uppercase;
+	display: inline-block;
+	font-weight: lighter;
+	letter-spacing: 0.3em;
+	line-height: 45px;
 }
 
 
