@@ -6,16 +6,34 @@
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	
   	<script type="text/javascript" charset="utf-8">
-		$( window ).ready(function() {
-			resizeLiCrap();
+		$(document).ready(function(){
+			var picture = new Image();  // create new image object <img>
+			picture.onload = function(){ // after image loads
+				// find all <li> elements and set their heights to this.width
+				// <img src="..." height="999" width="999">
+				// this.width = 999
+				// $('ul.img-list li') = all images
+				// set all images width to 999
+				// "where to"
+				$('ul.img-list li').css("height", this.width)
+
+			}
+			//"where from"
+			picture.src = $('ul.img-list img').first().attr('src');  // set source
+			
+
+			// <img src="picture.jpg">
 		});
+
 		$( window ).resize(function() {
 			resizeLiCrap();
 		});
+
 		function resizeLiCrap(){
 			var boxwidth = $('ul.img-list img')[0].width
 			$('ul.img-list li').css("height",boxwidth)
 		}
+
   	</script>
 
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Italianno" />
